@@ -1,0 +1,16 @@
+{
+  "name": "hentai_pic_qq_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arsfy",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "fs": "^0.0.1-security",
+    "oicq": "^2.2.0"
+  }
+}
