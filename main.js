@@ -147,8 +147,8 @@ client.on("message", async (e) => {
                     e.reply(msgStr, true);
                     break
                 case "/图库数量":
-                    let pic_list = fs.readdirSync('./pic');
-                    e.reply(`现在有 ${pic_list.length} 张图可以色色！`, true);
+                    let piclen = fs.readdirSync('./pic').length;
+                    e.reply(`现在有 ${piclen} 张图可以色色！`, true);
                     break
             }
             break;
