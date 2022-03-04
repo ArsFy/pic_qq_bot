@@ -62,7 +62,7 @@ client.on("message", async (e) => {
             let msg_list = e.message[0].text.split(" ");
             switch (msg_list[0]) {
                 case "/帮助":
-                    e.reply("这是一个色色Bot！你可以用它得到色色的二次元图（可能有些并不色）\n指令：\n\"/色色\" 随机图\n\"/添加\" 添加新图（管理员）\n\"/批量添加\" 批量添加新图，使用 \"结束添加\" 结束 (管理员）\n\"/添加管理员 管理员QQ号或直接回复消息\" 添加管理员\n\"/删除管理员 管理员QQ号或直接回复消息\" 删除管理员", true);
+                    e.reply("这是一个色色Bot！你可以用它得到色色的二次元图（可能有些并不色）\n指令：\n\"/色色\" 随机图\n\"/添加\" 添加新图（管理员）\n\"/批量添加\" 批量添加新图，使用 \"结束添加\" 结束 (管理员）\n\"/添加管理员 管理员QQ号或直接回复消息\" 添加管理员\n\"/删除管理员 管理员QQ号或直接回复消息\" 删除管理员\n\"/图库数量\" 查看库里有多少张图", true);
                     break;
                 case "/色色":
                     let pic_list = fs.readdirSync('./pic');
@@ -145,6 +145,10 @@ client.on("message", async (e) => {
                         msgStr += `${config.admin[i]}\n`
                     }
                     e.reply(msgStr, true);
+                    break
+                case "/图库数量":
+                    let pic_list = fs.readdirSync('./pic');
+                    e.reply(`现在有 ${pic_list.length} 张图可以色色！`, true);
                     break
             }
             break;
